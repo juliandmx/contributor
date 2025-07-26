@@ -43,6 +43,8 @@ def make_dummy_commit():
         user_name = os.getenv("GIT_USER_NAME", "Default Name")
         user_email = os.getenv("GIT_USER_EMAIL", "default@example.com")
 
+        print("Using", user_name, user_email)
+
         subprocess.run(['git', 'config', 'user.email', user_email], check=True)
         subprocess.run(['git', 'config', 'user.name', user_name], check=True)
 
