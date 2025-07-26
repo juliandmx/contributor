@@ -4,7 +4,7 @@ from datetime import datetime
 
 FILE_PATH = os.path.abspath(__file__)
 REPO_PATH = os.path.dirname(FILE_PATH)
-FILENAME = "cuntribute_here.txt"
+FILENAME = "contribute_here.txt"
 
 def make_dummy_commit():
     os.chdir(REPO_PATH)
