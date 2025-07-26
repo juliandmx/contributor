@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'  # Change if needed
 
       - name: Run your script
-        run: python daily_task.py
+        run: python committer.py
 
       - name: Commit changes
         run: |
