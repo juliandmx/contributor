@@ -20,6 +20,7 @@ start_date = datetime(2025, 7, 20)
 
 def commit_day():
     today = datetime.now()
+    today = datetime(2025, 7, 28)
     # y = 0: monday, y = 6: sunday
     y = today.weekday()
     # shift for github contribution
