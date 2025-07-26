@@ -40,6 +40,7 @@ def make_dummy_commit():
 
         os.chdir(REPO_PATH)
 
+        subprocess.run(['git', 'config', 'user.name', 'Your Name'], check=True)
         subprocess.run(['git', 'config', 'user.email', 'julian@dammdesign.de'], check=True)
 
         #Commit 5 times
