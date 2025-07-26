@@ -18,13 +18,11 @@ jobs:
         with:
           python-version: '3.11'  # Change if needed
 
-      - name: Set git identity
-        run: |
-          git config user.name "${{ vars.GIT_USER_NAME }}"
-          git config user.email "${{ vars.GIT_USER_EMAIL }}"
-
       - name: Run your script
         run: python committer.py
+        env:
+          GIT_USER_NAME: ${{ vars.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ vars.GIT_USER_EMAIL }}
 
       - name: Commit changes
         run: |
