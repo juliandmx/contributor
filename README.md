@@ -1,4 +1,4 @@
-# Cotributer
+# Contributer
 This is hoestly just some fun repo to make a possible future recruiter or other viewer smile.
 Also it shows that I know how to properly work with github workflows to automate simple tasks.
 
