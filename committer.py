@@ -40,8 +40,9 @@ def make_dummy_commit():
 
         os.chdir(REPO_PATH)
 
-        subprocess.run(['git', 'config', 'user.name', 'Your Name'], check=True)
         subprocess.run(['git', 'config', 'user.email', 'julian@dammdesign.de'], check=True)
+        subprocess.run(['git', 'config', 'user.name', 'juliandmx'], check=True)
+
 
         #Commit 5 times
         for i in range(5):
@@ -50,9 +51,9 @@ def make_dummy_commit():
                 f.write(f"Update: {datetime.now()}\n")
 
             # Run git commands to add, commit, and push
-            subprocess.run(["git", "add", FILENAME])
-            subprocess.run(["git", "commit", "-m", f"Automated commit {datetime.now()}"])
-            subprocess.run(["git", "push"])
+            subprocess.run(["git", "add", FILENAME], check=True)
+            subprocess.run(["git", "commit", "-m", f"Automated commit {datetime.now()}"], check=True)
+            subprocess.run(["git", "push"], check=True)
 
 if __name__ == "__main__":
     make_dummy_commit()
