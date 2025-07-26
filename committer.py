@@ -40,6 +40,8 @@ def make_dummy_commit():
 
         os.chdir(REPO_PATH)
 
+        subprocess.run(['git', 'config', 'user.email', 'julian@dammdesign.de'], check=True)
+
         #Commit 5 times
         for i in range(5):
             # Update the dummy file with a timestamp
